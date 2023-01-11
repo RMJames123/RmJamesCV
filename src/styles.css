@@ -1,0 +1,42 @@
+:root {
+    --theme-color: white;
+    --primary-color: #124f88;
+    --secondary-color: #F7C331;
+    --text-color-inverse: white;
+    --text-color: black;
+    --navbar-shadow-color: #e5e5e5;
+    --menu-mobile-background-color: #3A4460;
+    --experience-color: #011d54;
+    
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section [id] {
+    scroll-margin-top: 70px;
+}
+
+.horizontal-padding{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.vertical-padding {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+@media (min-width: 950px){
+    .horizontal-padding{
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+    
+    .vertical-padding {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+    
+}

@@ -1,0 +1,45 @@
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" *ngFor="let item of educacion; let i=index;"
+            data="boton" [attr.data-bs-slide-to]="i" [attr.class]="i==0 ? 'active' : null"
+            [attr.aria-current]="i==0 ? true : null"></button>
+  </div>
+<div class="carousel-inner">
+  <div *ngFor="let item of educacion; let i=index;" [attr.class]="i==0 ? 'carousel-item active' : 'carousel-item'">
+
+    <div class="container p-4">
+      <div class="row">
+        
+              <div class="col-md-8">
+                  <div class="card text-center">
+                      <div class="card-body">
+                              <h3 class="card-title">
+                                  {{item.Titulo}}
+                              </h3>
+                              <h5>{{item.Institucion}}</h5>
+                              <h5>{{item.Ubicacion}}</h5>
+                              <h5>{{item.Fecha}}</h5>
+                      </div>
+                  </div>
+              </div>
+        
+      </div>
+    </div>
+    
+  </div>
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Next</span>
+</button>
+</div>
+
+
+
+
+
+

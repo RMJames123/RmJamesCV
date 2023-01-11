@@ -1,0 +1,21 @@
+<div class="horizontal-padding vertical-padding" >
+    <section class="profile" id="profile">
+        <div class="profile-info">
+            <div *ngFor="let item of perfil">
+                <h1 class="profile-title">
+                    {{item.Titulo}}
+                </h1>
+                <p class="profile-details">
+                    {{item.Descripcion}}
+                </p>
+            </div>
+            <a class="profile-btn" href="./../../assets/downloads/CV Raul Jaramillo.pdf" download>
+                Descargar CV
+            </a>
+        </div>
+        <span class="profile-img-section">
+            <img class="profile-img" src="./../../assets/img/Foto CV.png" alt="Programador"/>
+            <div class="profile-img-line"></div>
+        </span>
+    </section>
+</div>

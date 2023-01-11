@@ -1,0 +1,95 @@
+<section class="experiences" id="experience">
+
+  <div style="height: 150px; overflow: hidden;">
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+      <path d="M0.00,49.99 C149.99,150.00 349.81,-49.99 500.00,49.99 L500.00,150.00 L0.00,150.00 Z"
+        style="stroke: none; fill: #011d54"></path>
+    </svg>
+  </div>
+  <div class="experiences-body">
+    <h2 class="experiences-title">
+      Experiencia
+    </h2>
+    <!-- <table class="experiences-table"> -->
+    <table class="experiences-table">
+      <tbody>
+        <tr *ngFor="let item of experiencia;">
+          <div *ngIf="IsEmptyLeft()">
+          <td class="empty"></td>
+          <td class="line"></td>
+          <td class="experience">
+                  <div class="experience-date">
+                    {{item.Fecha}}
+                  </div>
+                  <div class="experience-company">
+                    {{item.Empresa}}
+                  </div>
+                  <div class="experience-position">
+                    {{item.Cargo}}
+                  </div>
+                  <div class="experience-location">
+                    {{item.Ubicacion}}
+                  </div>
+                  <div class="experience-functions">
+                    <div class="experience-functions-title">
+                      Logros/Funciones :
+                    </div>
+                    <ul class="experience-functions-list">
+                      <div *ngFor="let logro of item.Logros;">
+                        <li class="experience-functions-description">
+                          {{logro.Descripcion}}
+                        </li>
+                      </div>
+                    </ul>
+                  </div>
+                </td>
+              </div>
+              <div *ngIf="!IsEmptyLeft()">
+                <td class="experience experience_left" >
+                        <div class="experience-date">
+                          {{item.Fecha}}
+                        </div>
+                        <div class="experience-company">
+                          {{item.Empresa}}
+                        </div>
+                        <div class="experience-position">
+                          {{item.Cargo}}
+                        </div>
+                        <div class="experience-location">
+                          {{item.Ubicacion}}
+                        </div>
+                        <div class="experience-functions">
+                          <div class="experience-functions-title">
+                            Logros/Funciones :
+                          </div>
+                          <ul class="experience-functions-list">
+                            <div *ngFor="let logro of item.Logros;">
+                              <li class="experience-functions-description experience-functions-description_left">
+                                {{logro.Descripcion}}
+                              </li>
+                            </div>
+                          </ul>
+                        </div>
+                      </td>
+                      <td class="line"></td>
+                      <td class="empty"></td>      
+                    </div>
+      
+              <div *ngIf="SwEmptyLeft()"></div>
+
+        </tr>
+      </tbody>
+      </table>
+  </div>
+
+
+  <div style="height: 150px; overflow: hidden;">
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+      <path d="M0.00,49.99 C149.99,150.00 300.75,-49.99 500.00,49.99 L500.00,0.00 L0.00,0.00 Z"
+        style="stroke: none; fill: #011d54"></path>
+    </svg>
+  </div>
+
+
+</section>
+

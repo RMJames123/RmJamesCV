@@ -1,0 +1,115 @@
+.trainigns{
+    display: flex;
+    flex-direction: column;
+}
+
+.trainings-body{
+    background-color: var(--experience-color);
+    color : var(--text-color-inverse);
+}
+
+.wave {
+    width: 100%;
+}
+
+.trainings-title{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 30px;    
+    margin: 25px;
+}
+
+.training-date{
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.training-company{
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+.training {
+    padding: 25px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+@media (min-width: 950px) {
+    .trainings {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .trainings-body{
+        background-color: var(--experience-color);
+        color : var(--text-color-inverse);
+    }
+    
+    .wave {
+        width: 100%;
+    }
+    
+    .trainings-table {
+        padding: 70px;
+        justify-content: center;
+        max-width: 980px;
+        margin: 0 auto;
+   }
+
+    .trainings-title{
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 50px;    
+        margin: 25px;
+    }
+    
+    .training-date{
+        font-size: 25px;
+        font-weight: bold;
+        color: var(--secondary-color);
+    }
+    
+    .trainings-company{
+        font-size: 20px;
+        text-transform: uppercase;
+        margin-top: 5px;
+    }
+    
+     
+    .training {
+        padding: 20px;
+    }   
+
+    .training_left {
+        text-align: right;
+    }
+
+
+    td {
+        width: 400px;
+    }
+
+     .line {
+        width: 2px;
+        background-color: var(--text-color-inverse);
+        position: relative;
+      }
+
+      .line::before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-color: var(--text-color-inverse);
+        border-radius: 50%;
+        position: absolute;
+        top: -20px;
+        left: -9px;
+      }
+
+ }
