@@ -17,20 +17,22 @@
           </p>
         </div>
       </div>
-      <form class="contact-form" name="contactos" netlify>
+      <form class="contact-form" action="https://formsubmit.co/f12458ee692c646bf154adf73ed73b12" method="POST">
         <div class="contact-form-group">
           <label for="name">Nombre:</label>
-          <input required type="text" name="name" id="name">
+          <input required type="text" name="name">
         </div>
         <div class="contact-form-group">
           <label for="email">Email:</label>
-          <input required type="email" name="email" id="email">
+          <input required type="email" name="email">
         </div>
         <div class="contact-form-group">
           <label for="message">Mensaje:</label>
-          <textarea required name="message" id="message"  rows="6"></textarea>
+          <textarea required name="message"  rows="6"></textarea>
         </div>
         <button type="submit" class="contact-form-submit">Enviar</button>
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://rauljaramillo.netlify.app/contact">
       </form>
       <nav class="social">
         <ul class="social-list">
