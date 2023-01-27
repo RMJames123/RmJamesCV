@@ -5,8 +5,8 @@
 }
 
 .profile-img {
-    width: 15%;
-    max-width: 300px;
+    width: 50%;
+    max-width: 500px;
 }
 
 .profile-img-section {
@@ -65,7 +65,7 @@
     
     .profile-img {
         width: 100%;
-        max-width: 350px;
+        max-width: 450px;
         transform: scaleX(-1);
     }
     
