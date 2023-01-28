@@ -18,6 +18,7 @@
     font-weight: bold;
     font-size: 30px;    
     margin: 25px;
+    margin-top: -2px;
 }
 
 .training-date{
@@ -36,6 +37,10 @@
     padding: 25px;
     max-width: 500px;
     margin: 0 auto;
+}
+
+.olafoot {
+    margin-top: -2px;
 }
 
 @media (min-width: 950px) {

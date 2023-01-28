@@ -6,6 +6,7 @@
 .experiences-body{
     background-color: var(--experience-color);
     color : var(--text-color-inverse);
+    margin-top: -2px;
 }
 
 .wave {
@@ -42,6 +43,10 @@
     padding: 25px;
     max-width: 500px;
     margin: 0 auto;
+}
+
+.olafooter {
+    margin-top: -2px;
 }
 
 @media (min-width: 950px) {
