@@ -1,1 +1,53 @@
-<p>testimonios works!</p>
+<section class="testimonials" id="testimonials">
+  <div style="height: 150px; overflow: hidden;">
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+      <path d="M0.00,49.99 C149.99,150.00 349.81,-49.99 500.00,49.99 L500.00,150.00 L0.00,150.00 Z"
+        style="stroke: none; fill: #011d54"></path>
+    </svg>
+  </div>
+  <div class="testimonials-body">
+
+    <h2 class="testimonials-title">
+      Testimonios
+    </h2>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" *ngFor="let item of testimonio; let i=index;"
+          data="boton" [attr.data-bs-slide-to]="i" [attr.class]="i==0 ? 'active' : null"
+          [attr.aria-current]="i==0 ? true : null"></button>
+      </div>
+
+      <div class="carousel-inner">
+        <div *ngFor="let item of testimonio; let i=index;"
+          [attr.class]="i==0 ? 'carousel-item active' : 'carousel-item'">
+
+          <div class="card">
+              <div class="comentario">
+                "{{item.Descripcion}}"
+              </div>
+              <img class="img" src={{item.Foto}}>
+              <div class="datos">
+                <div class="nombre">
+                  {{item.Nombre}}
+                </div>
+                <div class="cargo">
+                  {{item.Cargo}}
+                </div>
+                <div class="empresa">
+                  {{item.Empresa}}
+                </div>
+              </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+

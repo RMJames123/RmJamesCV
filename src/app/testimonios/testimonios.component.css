@@ -1,0 +1,146 @@
+.testimonials-body {
+    background-color: var(--experience-color);
+    margin-top: -2px;
+    height: 400px;
+}
+
+.testimonials-title {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--text-color-inverse);
+}
+
+.comentario {
+    grid-area: comentario;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 10px;
+}
+
+.img {
+    grid-area: img;
+    display: grid;
+    width: 90px;
+    height: 90px;
+    padding: 10px;
+}
+
+.nombre {
+    grid-area: nombre;
+    font-style: italic;
+    margin-left: 10px;
+    font-weight: 300;
+}
+
+.cargo {
+    grid-area: cargo;
+    margin-left: 10px;
+    font-weight: 300;
+}
+
+.empresa {
+    grid-area: empresa;
+    margin-left: 10px;
+    font-weight: 300;
+}
+
+.datos {
+    grid-area: datos;
+    display: grid;
+    gap: 1px;
+    grid-template-rows: 30px 30px 30px;
+    grid-template-areas:
+        "nombre"
+        "cargo"
+        "empresa";
+}
+
+.card {
+    display: grid;
+    gap: 1px;
+    width: 75%;
+    height: 250px;
+    margin: auto;
+    grid-template-columns: 90px auto;
+    grid-template-rows: auto 90px;
+    grid-template-areas:
+        "comentario comentario"
+        "img datos";
+
+    background-color: black;
+    color: var(--secondary-color);
+}
+
+.carousel-inner {
+    height: 300px;
+}
+
+@media(min-width: 600px) {
+    .testimonials-body {
+        background-color: var(--experience-color);
+        margin-top: -2px;
+        height: 400px;
+    }
+
+    .nombre {
+        margin-left: 2px;
+    }
+
+    .cargo {
+        grid-area: cargo;
+        margin-left: 2px;
+    }
+
+    .empresa {
+        grid-area: empresa;
+        margin-left: 2px;
+    }
+
+    .datos {
+        grid-template-rows: 20px 20px 20px;
+        padding: auto;
+    }
+
+    .img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .card {
+        width: 60%;
+        height: 200px;
+        grid-template-columns: auto 70px 160px;
+        grid-template-rows: 100px 70px auto;
+        grid-template-areas:
+            "comentario comentario comentario"
+            ".          img        datos ";
+    }
+
+    .carousel-inner {
+        height: 250px;
+    }
+
+    .comentario {
+        padding: auto;
+
+    }
+
+}
+
+@media(min-width: 900px) {
+
+    .card {
+        width: 40%;
+        height: 200px;
+        grid-template-columns: auto 70px 160px;
+        grid-template-rows: 100px 70px auto;
+        grid-template-areas:
+            "comentario comentario comentario"
+            ".          img        datos ";
+    }
+
+
+}

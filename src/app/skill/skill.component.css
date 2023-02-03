@@ -9,6 +9,7 @@
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
+    color: var(--experience-color);
 }
 
 .skills-skill{
@@ -18,6 +19,7 @@
     border-radius: 42px;
     padding: 0.5em 0.7em;
     margin: 10px;
+    color: var(--experience-color);
 }
 
 .skills-list{

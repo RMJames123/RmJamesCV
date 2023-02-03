@@ -1,6 +1,6 @@
 .top-header {
     font-family: 'Quicksand', sans-serif;
-    background-color: var(--theme-color);
+    background-color: var(--experience-color);
     box-shadow: 0 4px 5px var(--navbar-shadow-color);
     position: fixed;
     left: 0;
@@ -12,6 +12,7 @@
 .midata {
     font-size: 15px;
     padding-left: 3px;
+    color: var(--text-color-inverse)
 }
 
 a {
@@ -50,8 +51,8 @@ margin: 0 auto;
 }
 
 .menu a {
-    color: var(--text-color);
-    font-size: 18px;
+    color: var(--text-color-inverse);
+    font-size: 14px;
     font-weight: 500;
     line-height: 50px;
     text-transform: uppercase;
