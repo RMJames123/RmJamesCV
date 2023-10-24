@@ -22,6 +22,14 @@ import { RouterModule } from '@angular/router';
 import { PerfilComponent } from './perfil/perfil.component';
 import { ContactoComponent } from './contacto/contacto.component';
 
+import { AngularFireModule } from '@angular/fire/compat'
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import {FormsModule} from '@angular/forms';
+
+
+import { environment } from '../environments/environment';
+import { PortafolioService } from '../app/servicios/portafolio.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +49,7 @@ import { ContactoComponent } from './contacto/contacto.component';
     HttpClientModule,
     NgbModule,
     DataTablesModule,
+    FormsModule,
     RouterModule.forRoot([
       {path: '',component:AppComponent},
       {path: 'experiencia',component:ExperienciaComponent},
@@ -49,11 +58,16 @@ import { ContactoComponent } from './contacto/contacto.component';
       {path: 'testimonios',component:TestimoniosComponent},
       {path: 'capacitaciones',component:CapacitacionesComponent},
       {path: '**',redirectTo:'/', pathMatch:'full'},        
-    ])
+      ]),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
   ],
   providers: [
-    LoadscriptsService
+    LoadscriptsService,
+    PortafolioService
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+   }

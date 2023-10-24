@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { PortafolioService } from '../servicios/portafolio.service';
 import { LoadscriptsService } from './../servicios/loadscripts.service';
 
 @Component({
@@ -6,13 +7,24 @@ import { LoadscriptsService } from './../servicios/loadscripts.service';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit {
 
-  constructor( _CargaScripts:LoadscriptsService ) { 
+export class NavbarComponent  {
+
+selectedIdioma = 'Español';
+
+mimenu: any[] = [];
+
+  constructor( _CargaScripts:LoadscriptsService,
+    private datosPortafolio:PortafolioService ) { 
     _CargaScripts.Carga(["toggleMenu"]);
   }
 
-  ngOnInit(): void {
+  OnInit(): void {
+
+    this.datosPortafolio.CargarMenu().subscribe( resp => {
+      this.mimenu = resp;
+    })
+  
   }
 
-}
+} 

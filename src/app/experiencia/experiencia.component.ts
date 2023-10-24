@@ -1,4 +1,4 @@
-import { Component, OnInit, TemplateRef } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit, TemplateRef } from '@angular/core';
 import { PortafolioService } from '../servicios/portafolio.service';
 
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
@@ -14,7 +14,8 @@ export class ExperienciaComponent implements OnInit {
 
   EmptyLeft = false;
 
-  constructor( private datosPortafolio:PortafolioService, _config:NgbCarouselConfig ) { }
+  constructor( 
+    private datosPortafolio:PortafolioService, _config:NgbCarouselConfig ) { }
 
   ngOnInit(): void {
     this.datosPortafolio.CargarExperiencia().subscribe(resp => {

@@ -16,6 +16,7 @@ export class PerfilComponent implements OnInit {
     this.datosPortafolio.CargarPerfil().subscribe( resp => {
     this.perfil = resp;
     })
+    
   }
 
 }

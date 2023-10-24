@@ -1,4 +1,28 @@
+.logo {
+    grid-area:logo;
+    padding-left: 5px;
+}
+
+.top-nav{
+    grid-area: top-nav;
+    padding: 0px;
+}
+
+.form-select {
+    grid-area: form-select;
+}
+
+.open-menu-img {
+    padding-right: 5px;
+}
+
 .top-header {
+    display:grid;
+    gap: 1px;
+    grid-template-columns: 200px auto 150px;
+    grid-template-areas: 
+     "logo top-nav form-select";
+
     font-family: 'Quicksand', sans-serif;
     background-color: var(--experience-color);
     box-shadow: 0 4px 5px var(--navbar-shadow-color);
@@ -10,7 +34,7 @@
 }
 
 .midata {
-    font-size: 15px;
+    font-size: 10px;
     padding-left: 3px;
     color: var(--text-color-inverse)
 }
@@ -82,10 +106,22 @@ margin: 0 auto;
     color: var(--primary-color);
 }
 
+
 .open-menu,
 .close-menu {
     display: none;
 }
+
+.form-select {
+    font-size: 10px;
+    width: 90px;
+    height: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: var(--experience-color);
+    color: var(--text-color-inverse);
+}
+
 
 @media (max-width: 950px) {
    
@@ -140,6 +176,22 @@ margin: 0 auto;
         color: var(--secondary-color);
     }
     
-
+    .top-header {
+        display:grid;
+        gap: 1px;
+        grid-template-columns: 200px auto 100px;
+        grid-template-areas: 
+         "logo  form-select top-nav";
+    
+        font-family: 'Quicksand', sans-serif;
+        background-color: var(--experience-color);
+        box-shadow: 0 4px 5px var(--navbar-shadow-color);
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+    }
+    
 
 }
