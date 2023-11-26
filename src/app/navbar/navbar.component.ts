@@ -1,6 +1,8 @@
 import { Component, OnInit} from '@angular/core';
 import { PortafolioService } from '../servicios/portafolio.service';
 import { LoadscriptsService } from './../servicios/loadscripts.service';
+import { LanguageService } from '../servicios/language.service';
+
 
 @Component({
   selector: 'app-navbar',
@@ -10,21 +12,31 @@ import { LoadscriptsService } from './../servicios/loadscripts.service';
 
 export class NavbarComponent  {
 
-selectedIdioma = 'Español';
+selectedIdioma = this.LangServ.sIdioma;
 
 mimenu: any[] = [];
 
   constructor( _CargaScripts:LoadscriptsService,
-    private datosPortafolio:PortafolioService ) { 
+    private datosPortafolio:PortafolioService,
+    private LangServ:LanguageService ) { 
     _CargaScripts.Carga(["toggleMenu"]);
   }
 
-  OnInit(): void {
+  ngOnInit(): void {
 
     this.datosPortafolio.CargarMenu().subscribe( resp => {
       this.mimenu = resp;
     })
   
+  }
+
+  salvar_Idioma( sIdioma: string ){
+
+this.LangServ.grabar_language(sIdioma );
+
+window.location.reload();
+
+
   }
 
 } 

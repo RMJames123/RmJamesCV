@@ -2,18 +2,18 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
-import { NavbarComponent } from '../navbar/navbar.component';
-
+import { LanguageService } from './language.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PortafolioService {
 
-   Idioma: string = 'Español';
+   Idioma: string = this.LangService.sIdioma;
 
    constructor( private http: HttpClient,
-      private dbPortfolio: AngularFireDatabase ) {
+      private dbPortfolio: AngularFireDatabase,
+      private LangService: LanguageService ) {
 
       }
 

@@ -17,21 +17,17 @@
       <button class="close-menu" arial-laberl="Cerrar menu">
         <img src="./../../assets/img/Close_icon.svg.png" alt="cerrar menu" />
       </button>
-      <li><a href="#profile" class="selected">Perfil</a></li>
-      <li><a href="#experience">Experiencia</a></li>
-      <li><a href="#skills">Habilidades</a></li>
-      <li><a href="#trainings">Capacitaciones</a></li>
-      <li><a href="#testimonials">Testimonios</a></li>
-      <li><a href="#contact">Contacto</a></li>
 
+      <li *ngFor="let item of mimenu">
+        <a href="{{item.Boton}}">{{item.Opcion}}</a></li>
     </ul>
 
 
   </nav>
 
-  <select  name="selectedIdioma" id="selIdioma" class="form-select" aria-label="Selecciona idioma" [(ngModel)]="selectedIdioma">
-    <option value="Español" selected>Spanish</option>
-    <option value="Ingles">English</option>
+  <select  name="selectedIdioma" id="selIdioma" class="form-select" aria-label="Selecciona idioma" (change)="salvar_Idioma(selectedIdioma)" [(ngModel)]="selectedIdioma">
+    <option value="Spanish">Spanish</option>
+    <option value="English">English</option>
  </select>
 
 </header>
