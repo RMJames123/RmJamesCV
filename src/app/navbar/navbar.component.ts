@@ -15,6 +15,7 @@ export class NavbarComponent  {
 selectedIdioma = this.LangServ.sIdioma;
 
 mimenu: any[] = [];
+lstidiomas: any[] = [];
 
   constructor( _CargaScripts:LoadscriptsService,
     private datosPortafolio:PortafolioService,
@@ -24,7 +25,11 @@ mimenu: any[] = [];
 
   ngOnInit(): void {
 
-    this.datosPortafolio.CargarMenu().subscribe( resp => {
+    this.datosPortafolio.CargarIdiomas().subscribe( resp => {
+      this.lstidiomas = resp;
+      })
+
+      this.datosPortafolio.CargarMenu().subscribe( resp => {
       this.mimenu = resp;
     })
   

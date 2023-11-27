@@ -17,6 +17,13 @@ export class PortafolioService {
 
       }
 
+CargarIdiomas():Observable<any>{
+
+   return this.http.get('https://rm-portafolio-default-rtdb.firebaseio.com/Idiomas.json');
+ 
+
+}
+
 CargarMenu():Observable<any>{
 
    return this.dbPortfolio.list('/Menu', 

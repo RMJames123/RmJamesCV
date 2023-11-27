@@ -26,8 +26,11 @@
   </nav>
 
   <select  name="selectedIdioma" id="selIdioma" class="form-select" aria-label="Selecciona idioma" (change)="salvar_Idioma(selectedIdioma)" [(ngModel)]="selectedIdioma">
-    <option value="Spanish">Spanish</option>
-    <option value="English">English</option>
+    <option *ngFor="let optItem of lstidiomas" value="{{optItem.Valor}}">
+      {{optItem.Boton}}
+    </option>
+    
+    
  </select>
 
 </header>
