@@ -37,8 +37,6 @@ CargarMenu():Observable<any>{
    return this.dbPortfolio.list('/Perfil', 
    ref => this.Idioma ?  ref.orderByChild('Idioma').equalTo(this.Idioma) : ref ).valueChanges();
 
-//    return this.dbPortfolio.list('Perfil').valueChanges();
-//    return this.http.get('https://rm-portafolio-default-rtdb.firebaseio.com/Perfil.json');
   }
  
    CargarSkill():Observable<any>{
@@ -46,17 +44,35 @@ CargarMenu():Observable<any>{
       return this.dbPortfolio.list('/Skill', 
       ref => this.Idioma ?  ref.orderByChild('Idioma').equalTo(this.Idioma) : ref ).valueChanges();
 
-//    return this.dbPortfolio.list('Skill').valueChanges();
-//    return this.http.get('https://rm-portafolio-default-rtdb.firebaseio.com/Skill.json')
    }
+
+   TituloSkill():Observable<any>{
+
+      var strBtn = new String("#skills_");
+      var strLang = new String(this.Idioma);
+      var strBtnLang = strBtn.concat(strLang.toString())
+
+      return this.dbPortfolio.list('/Menu', 
+      ref => strBtnLang ?  ref.orderByChild('BtnLang').equalTo(strBtnLang) : ref ).valueChanges();
+
+   }
+
 
    CargarExperiencia():Observable<any>{
 
    return this.dbPortfolio.list('/Experiencia', 
    ref => this.Idioma ?  ref.orderByChild('Idioma').equalTo(this.Idioma) : ref ).valueChanges();
+   }
 
-//    return this.dbPortfolio.list('Experiencia').valueChanges();
-//    return this.http.get('https://rm-portafolio-default-rtdb.firebaseio.com/Experiencia.json')
+   TituloExperiencia():Observable<any>{
+
+      var strBtn = new String("#experience_");
+      var strLang = new String(this.Idioma);
+      var strBtnLang = strBtn.concat(strLang.toString())
+
+      return this.dbPortfolio.list('/Menu', 
+      ref => strBtnLang ?  ref.orderByChild('BtnLang').equalTo(strBtnLang) : ref ).valueChanges();
+
    }
 
    CargarEducacion():Observable<any>{
@@ -64,8 +80,6 @@ CargarMenu():Observable<any>{
    return this.dbPortfolio.list('/Educacion', 
    ref => this.Idioma ?  ref.orderByChild('Idioma').equalTo(this.Idioma) : ref ).valueChanges();
 
-//    return this.dbPortfolio.list('Educacion').valueChanges();    
-//    return this.http.get('https://rm-portafolio-default-rtdb.firebaseio.com/Educacion.json')
    }
 
    CargarCapacitaciones():Observable<any>{
@@ -73,20 +87,54 @@ CargarMenu():Observable<any>{
       return this.dbPortfolio.list('/Capacitaciones', 
       ref => this.Idioma ? ref.orderByChild('Idioma').equalTo(this.Idioma) : ref ).valueChanges();
 
-//    return this.dbPortfolio.list('Capacitaciones').valueChanges();
-//    return this.http.get('https://rm-portafolio-default-rtdb.firebaseio.com/Capacitaciones.json')
    }
+
+   TituloCapacitaciones():Observable<any>{
+
+      var strBtn = new String("#trainings_");
+      var strLang = new String(this.Idioma);
+      var strBtnLang = strBtn.concat(strLang.toString())
+
+      return this.dbPortfolio.list('/Menu', 
+      ref => strBtnLang ?  ref.orderByChild('BtnLang').equalTo(strBtnLang) : ref ).valueChanges();
+
+   }
+
 
    CargarTestimonios():Observable<any>{
 
       return this.dbPortfolio.list('/Testimonios', 
       ref => this.Idioma ? ref.orderByChild('Idioma').equalTo(this.Idioma) : ref ).valueChanges();
 
-//    return this.dbPortfolio.list('Testimonios').valueChanges();
-//    return this.http.get('https://rm-portafolio-default-rtdb.firebaseio.com/Testimonios.json')
    }
-  
+
+   TituloTestimonios():Observable<any>{
+
+      var strBtn = new String("#testimonials_");
+      var strLang = new String(this.Idioma);
+      var strBtnLang = strBtn.concat(strLang.toString())
+
+      return this.dbPortfolio.list('/Menu', 
+      ref => strBtnLang ?  ref.orderByChild('BtnLang').equalTo(strBtnLang) : ref ).valueChanges();
+
+   }
+
+   CargarContacto():Observable<any>{
+
+      return this.dbPortfolio.list('/Contacto', 
+      ref => this.Idioma ? ref.orderByChild('Idioma').equalTo(this.Idioma) : ref ).valueChanges();
+
+   }
+
+   TituloContacto():Observable<any>{
+
+      var strBtn = new String("#contact_");
+      var strLang = new String(this.Idioma);
+      var strBtnLang = strBtn.concat(strLang.toString())
+
+      return this.dbPortfolio.list('/Menu', 
+      ref => strBtnLang ?  ref.orderByChild('BtnLang').equalTo(strBtnLang) : ref ).valueChanges();
+
+   }
 
 }
-
-

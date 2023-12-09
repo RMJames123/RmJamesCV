@@ -9,13 +9,20 @@ import { PortafolioService } from '../servicios/portafolio.service';
 export class SkillComponent implements OnInit {
 
   skill: any[] = [];
+  titskill: any[] = [];
+  
 
   constructor( private datosFortafolio:PortafolioService ) { }
 
   ngOnInit(): void {
     this.datosFortafolio.CargarSkill().subscribe( resp => {
       this.skill = resp;
-    })
+    });
+
+    this.datosFortafolio.TituloSkill().subscribe( resp => {
+      this.titskill = resp;
+    });
+
   }
 
 }

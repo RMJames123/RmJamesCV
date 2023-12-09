@@ -4,13 +4,16 @@
     height: 400px;
 }
 
-.testimonials-title {
-    font-size: 30px;
-    font-weight: bold;
-    text-transform: uppercase;
+.testimonials-title{
     text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 50px;    
+    margin: 25px;
+    margin-top: -2px;
     color: var(--text-color-inverse);
 }
+
 
 .comentario {
     grid-area: comentario;

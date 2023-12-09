@@ -7,9 +7,11 @@
     </svg>
   </div>
   <div class="trainings-body">
-    <h2 class="trainings-title">
-      Capacitaciones
+
+    <h2 *ngFor="let titulo of titcapacitaciones" class="trainings-title">
+      {{titulo.Opcion}}
     </h2>
+  
     <!-- <table class="experiences-table"> -->
     <table class="trainings-table">
       <tbody>

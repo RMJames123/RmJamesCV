@@ -7,9 +7,11 @@
     </svg>
   </div>
   <div class="experiences-body">
-    <h2 class="experiences-title">
-      Experiencia
-    </h2>
+ 
+  <h2 *ngFor="let titulo of titexperiencia" class="experiences-title">
+    {{titulo.Opcion}}
+  </h2>
+
     <!-- <table class="experiences-table"> -->
     <table class="experiences-table">
       <tbody>

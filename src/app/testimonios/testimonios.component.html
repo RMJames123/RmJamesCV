@@ -6,11 +6,9 @@
     </svg>
   </div>
   <div class="testimonials-body">
-
-    <h2 class="testimonials-title">
-      Testimonios
+    <h2 *ngFor="let titulo of tittestimonio" class="testimonials-title">
+      {{titulo.Opcion}}
     </h2>
-
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 
       <div class="carousel-indicators">

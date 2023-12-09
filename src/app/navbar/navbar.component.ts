@@ -2,7 +2,7 @@ import { Component, OnInit} from '@angular/core';
 import { PortafolioService } from '../servicios/portafolio.service';
 import { LoadscriptsService } from './../servicios/loadscripts.service';
 import { LanguageService } from '../servicios/language.service';
-
+import { MenuitemService } from '../servicios/menuitem.service';
 
 @Component({
   selector: 'app-navbar',
@@ -31,9 +31,11 @@ lstidiomas: any[] = [];
 
       this.datosPortafolio.CargarMenu().subscribe( resp => {
       this.mimenu = resp;
-    })
   
-  }
+    });
+
+    
+    }
 
   salvar_Idioma( sIdioma: string ){
 

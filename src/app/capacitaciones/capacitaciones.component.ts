@@ -9,6 +9,8 @@ import { PortafolioService } from '../servicios/portafolio.service';
 export class CapacitacionesComponent implements OnInit {
 
   capacitaciones: any[] = [];
+  titcapacitaciones: any[] = [];
+
   EmptyLeftT = true;
 
   constructor( private datosPortafolio:PortafolioService ) { }
@@ -16,7 +18,12 @@ export class CapacitacionesComponent implements OnInit {
   ngOnInit(): void {
     this.datosPortafolio.CargarCapacitaciones().subscribe( resp => {
     this.capacitaciones = resp;
-    })
+    });
+
+    this.datosPortafolio.TituloCapacitaciones().subscribe( resp => {
+      this.titcapacitaciones = resp;
+
+      })
   }
 
   IsEmptyLeftT() {

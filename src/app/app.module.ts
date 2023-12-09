@@ -30,6 +30,7 @@ import {FormsModule} from '@angular/forms';
 import { environment } from '../environments/environment';
 import { PortafolioService } from '../app/servicios/portafolio.service';
 import { LanguageService } from './servicios/language.service';
+import { MenuitemService } from './servicios/menuitem.service';
 
 
 @NgModule({
@@ -67,7 +68,8 @@ import { LanguageService } from './servicios/language.service';
   providers: [
     LoadscriptsService,
     PortafolioService,
-    LanguageService
+    LanguageService,
+    MenuitemService
   ],
   bootstrap: [AppComponent]
 })

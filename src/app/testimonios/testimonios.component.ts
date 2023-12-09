@@ -9,12 +9,17 @@ import { PortafolioService } from '../servicios/portafolio.service';
 export class TestimoniosComponent implements OnInit {
 
   testimonio: any[] = [];
+  tittestimonio: any[] = [];
 
   constructor( private datosPortafolio:PortafolioService ) { }
 
   ngOnInit(): void {
     this.datosPortafolio.CargarTestimonios().subscribe(resp => {
       this.testimonio = resp;
+    });
+
+    this.datosPortafolio.TituloTestimonios().subscribe(resp => {
+      this.tittestimonio = resp;
     })
   }
 

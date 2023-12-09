@@ -11,16 +11,22 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 export class ExperienciaComponent implements OnInit {
 
   experiencia: any[] = [];
+  titexperiencia: any[] = [];
 
   EmptyLeft = false;
 
   constructor( 
-    private datosPortafolio:PortafolioService, _config:NgbCarouselConfig ) { }
+    private datosPortafolio:PortafolioService, 
+    _config:NgbCarouselConfig ) { }
 
   ngOnInit(): void {
     this.datosPortafolio.CargarExperiencia().subscribe(resp => {
       this.experiencia = resp;
-    })
+      });
+  
+      this.datosPortafolio.TituloExperiencia().subscribe(resp => {
+        this.titexperiencia = resp;
+        });
   }
 
   IsEmptyLeft() {

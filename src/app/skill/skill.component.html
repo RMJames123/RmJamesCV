@@ -1,7 +1,13 @@
 <section class = "skills" id="skills">
+<!--
     <h2 class="skills-title">
       Habilidades
     </h2>
+-->
+    <h2 *ngFor="let titulo of titskill" class="skills-title">
+      {{titulo.Opcion}}
+    </h2>
+
     <ul class="skills-list">
 
       <div *ngFor="let item of skill">
