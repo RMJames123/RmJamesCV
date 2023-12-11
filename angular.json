@@ -72,10 +72,12 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "mipagina:build:production"
+              "browserTarget": "mipagina:build:production",
+              
             },
             "development": {
-              "browserTarget": "mipagina:build:development"
+              "browserTarget": "mipagina:build:development",
+              
             }
           },
           "defaultConfiguration": "development"

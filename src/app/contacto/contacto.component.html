@@ -27,7 +27,11 @@
           </p>
         </div>
       </div>
-      <form name = "contact" class="contact-form" method="POST" data-netlify="true">
+
+<!--     
+   <form name = "contact" class="contact-form" method="POST" data-netlify="true">
+-->
+   <form name="contact" method="POST" netlify>
         <div *ngFor="let item of contacto">
         <div class="contact-form-group">
           <label for="name">
@@ -50,8 +54,9 @@
         <button type="submit" class="contact-form-submit">
           {{item.Boton}}
         </button>
-        <input type="hidden" name="_next" value="https://rauljaramillo.netlify.app/#contact"/>
-        <input type="hidden" name="_captcha" value="false"/>
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://rauljaramillo.netlify.app/#contact">
+
       </div>
       </form>
       <nav class="social">
