@@ -25,7 +25,11 @@ export class ContactoComponent implements OnInit {
     this.datosPortafolio.TituloContacto().subscribe( resp => {
       this.titcontacto = resp;
       });
-  }
 
-  
+    }
+
+    MiSubmit():void {
+      console.log("Email enviado!")        
+    }
+
 }

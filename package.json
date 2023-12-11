@@ -25,6 +25,7 @@
     "@popperjs/core": "^2.11.6",
     "angular-datatables": "^14.0.2",
     "bootstrap": "^5.2.2",
+    "cors": "^2.8.5",
     "datatables.net": "^1.13.1",
     "datatables.net-dt": "^1.13.1",
     "firebase": "^9.17.1",

@@ -27,29 +27,31 @@
           </p>
         </div>
       </div>
-      <form class="contact-form" action="https://formsubmit.co/f12458ee692c646bf154adf73ed73b12" method="POST">
+      <form name = "contact" class="contact-form" method="POST" data-netlify="true">
         <div *ngFor="let item of contacto">
         <div class="contact-form-group">
           <label for="name">
             {{item.Nombre}}:
           </label>
-          <input required type="text" name="name" id="name"/>
+          <input required type="text" name="name" id="name" autocomplete="on"/>
         </div>
         <div class="contact-form-group">
           <label for="email">
             {{item.Email1}}:
           </label>
-          <input required type="email" name="email" id="email"/>
+          <input type="email" name="email" id="email" autocomplete="on"/>
         </div>
         <div class="contact-form-group">
           <label for="message">
             {{item.Mensaje1}}:
           </label>
-          <textarea required name="message"  rows="6" id="message"></textarea>
+          <textarea required name="message"  rows="6" id="message" autocomplete="off"></textarea>
         </div>
         <button type="submit" class="contact-form-submit">
           {{item.Boton}}
         </button>
+        <input type="hidden" name="_next" value="https://rauljaramillo.netlify.app/#contact"/>
+        <input type="hidden" name="_captcha" value="false"/>
       </div>
       </form>
       <nav class="social">
