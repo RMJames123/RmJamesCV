@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { PortafolioService } from '../servicios/portafolio.service';
 
 import { Component, OnInit } from '@angular/core';
+import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 
 @Component({
   selector: 'app-contacto',
@@ -28,8 +29,16 @@ export class ContactoComponent implements OnInit {
 
     }
 
-    MiSubmit():void {
-      console.log("Email enviado!")        
+    public sendEmail(e: Event) {
+      e.preventDefault();
+      emailjs.sendForm('SendEmailHot', 'template_erg8wvo', e.target as HTMLFormElement, 'P4lgFglXabNxfC758')
+        .then((result: EmailJSResponseStatus) => {
+          alert("Email enviado!!!");
+        }, (error) => {
+          alert(error.text);
+        });
+      
     }
+
 
 }

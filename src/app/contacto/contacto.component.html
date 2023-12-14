@@ -1,87 +1,83 @@
-    <section class = "contact" id="contact">
+<section class="contact" id="contact">
 
-      <h2 *ngFor="let titulo of titcontacto" class="contact-title">
-        {{titulo.Opcion}}
-      </h2>
-  
-      <div *ngFor="let item of contacto" class="contact-details">
-        <div class="contact-details-group">
-          <p class="contact-label">
-            {{item.Direccion}}:
-          </p>
-          <p class="contact-text">
-            {{item.Ubicacion}}
-          </p>
-        </div>
-        <div class="contact-details-group">
-          <p class="contact-label">
-            {{item.Email2}}:
-          </p>
-          <p class="contact-text">
-            {{item.EmailContact}}
-          </p>
-        </div>
-        <div class="contact-details-group">
-          <p class="contact-text">
-            {{item.Mensaje2}}
-          </p>
-        </div>
+  <h2 *ngFor="let titulo of titcontacto" class="contact-title">
+    {{titulo.Opcion}}
+  </h2>
+
+  <div *ngFor="let item of contacto" class="contact-details">
+    <div class="contact-details-group">
+      <p class="contact-label">
+        {{item.Direccion}}:
+      </p>
+      <p class="contact-text">
+        {{item.Ubicacion}}
+      </p>
+    </div>
+    <div class="contact-details-group">
+      <p class="contact-label">
+        {{item.Email2}}:
+      </p>
+      <p class="contact-text">
+        {{item.EmailContact}}
+      </p>
+    </div>
+    <div class="contact-details-group">
+      <p class="contact-text">
+        {{item.Mensaje2}}
+      </p>
+    </div>
+  </div>
+
+  <form class="contact-form" (submit)="sendEmail($event)">
+    <div *ngFor="let item of contacto">
+      <div class="contact-form-group">
+        <label for="name">
+          {{item.Nombre}}:
+        </label>
+        <input class="form-control" type="text" name="name" id="name" autocomplete="on" required />
+      </div>
+      <div class="contact-form-group">
+        <label for="email">
+          {{item.Email1}}:
+        </label>
+        <input class="form-control" type="email" name="email" id="email" autocomplete="on" required />
+      </div>
+      <div class="contact-form-group">
+        <label for="message">
+          {{item.Mensaje1}}:
+        </label>
+        <textarea class="form-control" name="message" rows="6" id="message" autocomplete="off" required></textarea>
       </div>
 
-<!--     
-   <form name = "contact" class="contact-form" method="POST" data-netlify="true">
--->
-   <form name="contact" method="POST" netlify>
-        <div *ngFor="let item of contacto">
-        <div class="contact-form-group">
-          <label for="name">
-            {{item.Nombre}}:
-          </label>
-          <input required type="text" name="name" id="name" autocomplete="on"/>
-        </div>
-        <div class="contact-form-group">
-          <label for="email">
-            {{item.Email1}}:
-          </label>
-          <input type="email" name="email" id="email" autocomplete="on"/>
-        </div>
-        <div class="contact-form-group">
-          <label for="message">
-            {{item.Mensaje1}}:
-          </label>
-          <textarea required name="message"  rows="6" id="message" autocomplete="off"></textarea>
-        </div>
-        <button type="submit" class="contact-form-submit">
-          {{item.Boton}}
-        </button>
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://rauljaramillo.netlify.app/#contact">
+      <button type="submit" class="contact-form-submit">
+        {{item.Boton}}
+      </button>
 
-      </div>
-      </form>
-      <nav class="social">
-        <ul class="social-list">
-          <li class="social-item">
-            <a href="https://twitter.com/rmjaramillo" class="social-link">
-              <img src="./../../assets/img/Social/Twitter.png" alt="Twitter">
-            </a>
-          </li>
-          <li class="social-item">
-            <a href="https://www.facebook.com/raul.martin.7583" class="social-link">
-              <img src="./../../assets/img/Social/Facebook.png" alt="Facebook">
-            </a>
-          </li>
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/raul-martin-jaramillo-mesones-28847447/" class="social-link">
-              <img src="./../../assets/img/Social/LinkedIn.png" alt="linkedin">
-            </a>
-          </li>
-          <li class="social-item">
-            <a href="https://www.instagram.com/raulmartin631/">
-              <img src="./../../assets/img/Social/Instagram.png" alt="instagram">
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </section>
-  
+    </div>
+  </form>
+
+  <nav class="social">
+    <ul class="social-list">
+      <li class="social-item">
+        <a href="https://twitter.com/rmjaramillo" class="social-link">
+          <img src="./../../assets/img/Social/Twitter.png" alt="Twitter">
+        </a>
+      </li>
+      <li class="social-item">
+        <a href="https://www.facebook.com/raul.martin.7583" class="social-link">
+          <img src="./../../assets/img/Social/Facebook.png" alt="Facebook">
+        </a>
+      </li>
+      <li class="social-item">
+        <a href="https://www.linkedin.com/in/raul-martin-jaramillo-mesones-28847447/" class="social-link">
+          <img src="./../../assets/img/Social/LinkedIn.png" alt="linkedin">
+        </a>
+      </li>
+      <li class="social-item">
+        <a href="https://www.instagram.com/raulmartin631/">
+          <img src="./../../assets/img/Social/Instagram.png" alt="instagram">
+        </a>
+      </li>
+    </ul>
+  </nav>
+</section>

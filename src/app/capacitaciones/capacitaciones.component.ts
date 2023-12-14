@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit, TemplateRef } from '@angular/core';
 import { PortafolioService } from '../servicios/portafolio.service';
+
+import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-capacitaciones',
@@ -11,9 +13,10 @@ export class CapacitacionesComponent implements OnInit {
   capacitaciones: any[] = [];
   titcapacitaciones: any[] = [];
 
-  EmptyLeftT = true;
+  EmptyLeftT = false;
 
-  constructor( private datosPortafolio:PortafolioService ) { }
+  constructor( private datosPortafolio:PortafolioService,
+    _config:NgbCarouselConfig ) { }
 
   ngOnInit(): void {
     this.datosPortafolio.CargarCapacitaciones().subscribe( resp => {
