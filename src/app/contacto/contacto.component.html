@@ -28,7 +28,7 @@
     </div>
   </div>
 
-  <form class="contact-form" (submit)="sendEmail($event)">
+  <form id="frmContacto" class="contact-form" (submit)="sendEmail($event)">
     <div *ngFor="let item of contacto">
       <div class="contact-form-group">
         <label for="name">
