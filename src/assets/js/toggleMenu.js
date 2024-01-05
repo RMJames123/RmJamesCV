@@ -9,8 +9,8 @@ function toggleMenu() {
 openMenuBtn.addEventListener("click", toggleMenu);
 closeMenuBtn.addEventListener("click", toggleMenu);
 
-const menuLinks = document.querySelectorAll('.menu a[href^="#"]');
-
+//const menuLinks = document.querySelectorAll('.menu .a[href^="#"]');
+const menuLinks = document.querySelectorAll('.menuref');
 menuLinks.forEach(menuLink => { 
   menuLink.addEventListener("click", function() {
     menu.classList.remove("menu_opened");
